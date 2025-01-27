@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>day4</title>
+  </head>
+  <body>
+   <div>
+    <p> 1.Create a program for booking movie tickets where a user chooses a movie and seat category. The options should be:
+
+Movie:
+
+Action: Standard Seat - 10rs, VIP Seat - 20rs
+
+Comedy: Standard Seat - 8rs, VIP Seat - 15rs
+
+Drama: Standard Seat -6rs, VIP Seat - 12rs
+</p>
+
+<p> 2.Design a program that calculates discounts based on product categories (Electronics, Clothing, Grocery). Each category has specific discount rates for different products:
+
+Electronics: Mobile - 5%, Laptop - 10%
+
+Clothing: Men - 15%, Women - 20%
+
+Grocery: Fruits - 5%, Vegetables - 10%
+</p>
+
+<p> 3.Write a travel booking system that allows a user to select a mode of transport (Flight, Train, Bus) and then choose a class or category:
+
+Flight: Economy, Business
+
+Train: Sleeper, AC Class
+
+Bus: Standard,Luxury.</p>
+   </div>
+   
+    <script>
+     
+      // var marks = +prompt("enter marks: ");
+      // switch (true) {
+      //   case (marks > 80):
+      //     console.log("a grade");
+      //     break;
+      //   case (marks <= 80 && marks > 70):
+      //     console.log("b grade");
+      //     break;
+      //   case (marks <= 70 && marks > 60):
+      //     console.log("c grade");
+      //     break;
+      //   case (marks <= 60 && marks > 50):
+      //     console.log("d grade");
+      //     break;
+
+      //   default:
+      //     console.log("invalid grade");
+      //     break;
+      // }
+
+      let  products = prompt("enter category: ").toLowerCase();
+      let prods =prompt("enter sub category: ").toLowerCase();
+      switch(products){
+        case "electronic":
+          switch(prods){
+            case "mobile":
+              console.log("Discount is %5"); break;
+            case "laptop":
+              console.log("Discount is %15"); break;
+            case "tv":
+              console.log("Discount is %25"); break;
+              default:
+                console.log("enter valid product");
+          }
+          break;
+          case "clothing":
+          switch(prods){
+            case "men":
+              console.log("Discount is %55"); break;
+            case "women":
+              console.log("Discount is %35");break;
+            case "kids":
+              console.log("Discount is %45");break;
+              default:
+                console.log("enter valid product");
+          }
+          break;
+          case "grocery":
+          switch(prods){
+            case "fruits":
+              console.log("Discount is %30"); break;
+            case "vegetables":
+              console.log("Discount is %20");break;
+            case "lefyvegtables":
+              console.log("Discount is %10");break;
+              default:
+                console.log("enter valid product");
+          }
+          break;
+          default:
+          console.log("invalid categoty");
+      }
+
+      let movie = prompt("Choose a movie: ",'action,comedy,drama').toLowerCase();
+      let seat =  prompt("select seat category: ","standardseat,vipseat").toLowerCase();
+      switch(movie){
+        case "action":
+          switch(seat){
+            case "standardseat":
+              console.log(`Movie ${movie} seat no ${seat} 10rs`);break;
+            case "vipseat":
+              console.log(`Movie ${movie} seat no ${seat} 20rs`);break;
+          }
+          break;
+          case "comedy":
+          switch(seat){
+            case "standardseat":
+              console.log(`Movie ${movie} seat no ${seat} 8rs`);break;
+            case "vipseat":
+              console.log(`Movie ${movie} seat no ${seat} 15rs`);break;
+          }
+          break;
+          case "drama":
+          switch(seat){
+            case "standardseat":
+              console.log(`Movie ${movie} seat no ${seat} 6rs`);break;
+            case "vipseat":
+              console.log(`Movie ${movie} seat no ${seat} 12rs`);break;
+          }
+          break;
+      }
+
+      let transport = prompt("user to select a mode of transport (Flight, Train, Bus: )").toLowerCase();
+      let classcategory = prompt(" choose a class or category: (economy,business/sleeper,acclass/standard,luxury)").toLowerCase();
+      switch(transport){
+        case "flight":
+          switch(classcategory){
+            case "economy":
+              console.log(` In ${transport} class ${classcategory} booked`);break;
+            case "business":
+              console.log(` In ${transport} class ${classcategory} booked`);break;
+              default:
+                console.log(`invalid inputs`);
+          }
+          break;
+          case "train":
+          switch(classcategory){
+            case "sleeper":
+              console.log(`In ${transport} class ${classcategory} booked`);break;
+            case "acclass":
+              console.log(`In ${transport} class ${classcategory} booked`);break;
+              default:
+                console.log(`invalid inputs`);
+          }
+          break;
+          case "bus":
+          switch(classcategory){
+            case "standard":
+              console.log(`In ${transport} class ${classcategory} booked`);break;
+            case "luxury":
+              console.log(`In ${transport} class ${classcategory} booked`);break;
+              default:
+                console.log(`invalid inputs`);
+          }
+          break;
+      }
+
+      //       function checkScreenSize() {
+      //     const width = window.innerWidth;
+
+      //     if (width < 600) {
+      //         console.log("Small screen");
+      //         // Add your logic for small screens here
+      //     } else if (width >= 600 && width < 1024) {
+      //         console.log("Medium screen");
+      //         // Add your logic for medium screens here
+      //     } else {
+      //         console.log("Large screen");
+      //         // Add your logic for large screens here
+      //     }
+      // }
+
+      // // Call the function when the window is resized
+      // window.addEventListener('resize', checkScreenSize);
+
+      // // Call the function initially to set the correct screen size
+      // checkScreenSize();
+    </script>
+  </body>
+</html>
